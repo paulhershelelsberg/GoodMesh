@@ -16,6 +16,7 @@ class ofApp : public ofBaseApp
 		void update();
 		void draw();
 		void setNormals(ofMesh &mesh);
+    void fSlideChanged(float & val);
 
 		void keyPressed(int key);
 	
@@ -23,5 +24,13 @@ class ofApp : public ofBaseApp
 	
 		ofTrueTypeFontExt		fontSmall;
     
-    ofMesh mesh;
+    vector<ofMesh> mesh;
+    ofMesh tempMesh;
+    ofxPanel gui;
+    ofxVec3Slider o;
+    int x,y,z,x2,y2,z2;
+    int w;
+    int h;
+    ofxFloatSlider fSlide;
+    float fval;
 };
